@@ -1,0 +1,110 @@
+:root {
+  --bright_orange: hsl(31, 77%, 52%);
+  --dark_cyan: hsl(184, 100%, 22%);
+  --very_dark_cyan: hsl(179, 100%, 13%);
+  --transparent_white: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --very_light_gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 17rem;
+  margin-bottom: 10rem;
+}
+
+.card {
+  width: 31rem;
+  padding: 4.2rem;
+  padding-bottom: 4.8rem;
+}
+
+.margin-bot {
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--very_light_gray);
+}
+
+.description {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--transparent_white);
+  margin-bottom: 9rem;
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-weight: 400;
+  background-color: var(--very_light_gray);
+  padding: 1rem 2.5rem;
+
+  border-radius: 50rem;
+  text-decoration: none;
+}
+
+.sedan .btn {
+  color: var(--bright_orange);
+}
+
+.sedan {
+  background-color: var(--bright_orange);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.suv {
+  background-color: var(--dark_cyan);
+}
+
+.luxury {
+  background-color: var(--very_dark_cyan);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* Responsiveness */
+
+/* @ 704 pixels */
+@media (max-width: 44rem) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8.8rem;
+  }
+
+  .description {
+    margin-bottom: 4rem;
+  }
+
+  .sedan {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1rem;
+  }
+
+  .luxury {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+}
